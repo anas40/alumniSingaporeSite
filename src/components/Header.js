@@ -1,17 +1,24 @@
 import React from "react"
 
-import { FaFacebookSquare, FaTwitterSquare, FaPhone, FaInstagramSquare, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaTwitter, FaPhone, FaInstagram, FaYoutube, FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { BiDonateHeart } from 'react-icons/bi'
 
 import logo from '../../static/logo.jpeg'
+import '../css/header.css'
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import Button from '@material-ui/core/Button';
+import { Navbar, Nav } from 'react-bootstrap'
+
+import Menu from './Menu'
+
 
 function Header() {
     return <header>
         <section>
             <div className="left">
-                <div><img src={logo} alt="logo" /></div>
-                <div className="container">
+                <div id="logo"><img src={logo} alt="logo" /></div>
+                <div className="Hcontainer">
                     <div className="associationName">
                         <p>AMU Alumni Association</p>
                     </div>
@@ -24,23 +31,97 @@ function Header() {
                 </div>
             </div>
             <div className="right">
-                <div>
-                    <div><MdEmail />mail</div>
-                    <div><FaPhone />number</div>
+                <div className="contact">
+                    <div><a href="mailto:demo@demo.com"><MdEmail />demo@demo.com</a></div>
+                    <div><a href="tel:+123123123"><FaPhone />+1212123434</a></div>
                 </div>
-                <div>
+                <div className="reach">
                     <div className="links">
-                        <div><a href="#"><FaFacebookSquare />Facebook</a></div>
-                        <div><a href="#"><FaTwitterSquare /></a></div>
-                        <div><a href="#"><FaInstagramSquare /></a></div>
+                        <div><a href="#"><FaFacebook /></a></div>
+                        <div><a href="#"><FaTwitter /></a></div>
+                        <div><a href="#"><FaInstagram /></a></div>
                         <div><a href="#"><FaYoutube /></a></div>
                     </div>
-                    <div className="donateButton">Donate<BiDonateHeart /></div>
+                    <Button className="donateButton" variant="contained" color="secondary">
+                        Donate<BiDonateHeart />
+                    </Button>
                 </div>
             </div>
         </section>
-        <nav></nav>
+        <NavCompo />
     </header>
 }
+
+function NavCompo() {
+    const content = [
+        {
+            tag: "Home",
+            link: '',
+            icon: 'FaHome',
+            sub: [{
+                tag: "Intro",
+                link: '',
+                icon: 'FaMicrophone'
+            }, {
+                tag: "Picture",
+                link: '',
+                icon: 'MdPhoto'
+            }]
+        }, {
+            tag: "About AMUAAS",
+            link: '',
+            icon: 'GoInfo',
+            sub: [{
+                tag: "Words from President",
+                link: '',
+                icon: 'GoPerson'
+            }, {
+                tag: " Intro",
+                    icon: 'FaMicrophone',
+                link: ''
+            }, {
+                tag: "Contact Us",
+                link: '',
+                icon: 'MdContactPhone'
+            }]
+        }, {
+            tag: "Events ",
+            link: '',
+            icon: 'MdEvent',
+            sub: [{
+                tag: "Pictures and text from Past Events",
+                link: '',
+                icon: 'FaImages'
+            }, {
+                tag: "Gallery. (ssd, food donations)",
+                link: '',
+                icon: 'FaImages'
+            }]
+        }, {
+            tag: "Meet Our Teams",
+            link: '',
+            icon:'FaHandshake',
+            sub: [{
+                tag: "Executive Committee",
+                link: '',
+                icon: 'RiTeamFill'
+            }, {
+                tag: "Working Committee",
+                link: '',
+                icon: 'BsFillPeopleFill'
+            }]
+        }
+
+    ]
+    return <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+                {content.map(item => <Menu item={item} />)}
+            </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+}
+
 
 export default Header

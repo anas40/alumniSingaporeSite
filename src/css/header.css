@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+
+/* ==================================================
+                        Header
+===================================================== */
+
+header > section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0;
+}
+header .left,
+header .right {
+  flex-basis: 45%;
+  width: 45%;
+}
+header .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #logo {
+  flex-basis: 100px;
+  width: 100px;
+}
+header .Hcontainer {
+  flex-basis: calc(100% - 100px - 20px);
+  width: calc(100% - 100px - 20px);
+}
+header .Hcontainer .associationName p {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  color: #006600;
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
+header .Hcontainer .location p {
+  font-weight: 700;
+  color: #800000;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+header .Hcontainer .nonProfit p {
+  color: #222222;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+header #logo img {
+  width: 100px;
+  height: 100px;
+}
+
+header .right {
+  display: flex;
+  justify-content: space-evenly;
+}
+header .right .contact {
+  flex-basis: 60%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+header .right .contact > div a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+header .right .contact > div svg {
+  margin-right: 0.5rem;
+}
+header .right .reach {
+  flex-basis: 30%;
+  width: 30%;
+  display: grid;
+  place-items: center;
+}
+header .right .reach .links {
+  width: 60%;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .right .reach .links a > * {
+  color: #232323;
+}
+
+@media screen and (max-width: 768px) {
+  header > section {
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  header .left,
+  header .right {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  header .left {
+    margin-bottom: 1rem;
+  }
+  header .right {
+    height: 100px;
+  }
+}
+
+/* ==================================================
+                        Navbar
+===================================================== */
+
+nav{
+  background-image: url('../../static/menu-back.jpg');
+}
+.navbar-nav{
+  justify-content: space-evenly;
+  flex-basis: 100%;
+  width: 100%;
+}
+.navbar.navbar-dark .navbar-nav .nav-link{
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+.navbar.navbar-dark .navbar-nav .nav-link:hover{
+  color: #ddd;
+}
+.navbar.navbar-dark .navbar-nav .nav-link:focus{
+  color: #fff !important;
+}
+.dropdown-menu{
+  background-color: #8d1a1a !important;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+.dropdown-menu .dropdown-item{
+  color: white;
+  padding: 1rem;
+  position: relative;
+  font-weight: 500;
+}
+.dropdown-menu .dropdown-item:hover{
+  color: white;
+  background-color: #8d1a1a !important;
+}
+.dropdown-menu .dropdown-item::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  background-color: white;
+  width: 0;
+  transition: all 0.5s ease;
+  visibility: hidden;
+}
+.dropdown-menu .dropdown-item:hover::after{
+  visibility: visible;
+  width: calc(100% - 2rem);
+  left: 1rem;
+}
+
+.listItem{
+  padding: 0 !important;
+}
+.navLinks{
+  padding: 0.375rem 1rem;
+  color: #006600 !important;
+  display: flex;
+  align-items: center;
+}
+.navLinks:hover {
+  text-decoration: none !important;
+}
+.MuiListItemIcon-root{
+  min-width: 30px !important;
+}
+
+.navButton{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler-icon{
+ background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=ffffff') !important;
+}
+@media screen and (max-width:768px){
+  .navButton{
+  margin: 1rem 0 !important;
+}
+}
