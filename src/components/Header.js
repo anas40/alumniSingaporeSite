@@ -1,15 +1,20 @@
 import React from "react"
 
-import { FaFacebook, FaTwitter, FaPhone, FaInstagram, FaYoutube, FaAngleDown, FaAngleUp } from 'react-icons/fa'
+//icons
+import { FaFacebook, FaTwitter, FaPhone, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { BiDonateHeart } from 'react-icons/bi'
-
-import logo from '../../static/logo.jpeg'
-import '../css/header.css'
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import Button from '@material-ui/core/Button';
-import { Navbar, Nav } from 'react-bootstrap'
 
+//logo
+import logo from '../../static/logo.jpeg'
+
+//css
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../css/header.css'
+
+//components
+import { Navbar, Nav } from 'react-bootstrap'
 import Menu from './Menu'
 
 
