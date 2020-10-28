@@ -1,0 +1,62 @@
+$black: #232323;
+main {
+  background-color: rgb(244, 245, 252);
+  padding: 2rem 0;
+}
+
+.pageTitle {
+  padding: 1rem 0;
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    color: #800000;
+
+  }
+}
+.text {
+  padding: 1rem;
+  p {
+    color: $black;
+    text-align: center;
+  }
+}
+.slider {
+  width: 80%;
+  min-width: 280px;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: rgb(244, 245, 252);
+
+  .heading {
+    h2 {
+      font-size: 1.4rem;
+      color: $black;
+      color: #800000;
+
+    }
+    p{
+      padding: 1rem;
+      margin: 0;
+      color: #555555;
+    }
+  }
+  .carouselContainer {
+    margin-top: 2rem;
+    padding: 1rem;
+
+    .legend.customizeLegend {
+      background-color: rgba($color: #000000, $alpha: 0);
+      font-weight: 700;
+      margin-bottom: 0px;
+      bottom: 20px;
+      font-size: 1rem;
+    }
+    .slide img {
+      height: 300px;
+    }
+
+    .carousel.carousel-slider {
+      border-radius: 4px;
+    }
+  }
+}
