@@ -32,7 +32,7 @@ function EventCarousel() {
         centerSlidePercentage: 60,
         transitionTime: 500,
         showStatus: false,
-        autoPlay: false,
+        autoPlay: true,
         showArrows: false
     }
 
