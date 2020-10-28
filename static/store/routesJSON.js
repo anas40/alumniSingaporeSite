@@ -6,6 +6,12 @@ export default [
         href: "/",
         sub: []
     }, {
+        tag: "Events ",
+        href: "/events",
+        link: '',
+        icon: 'MdEvent',
+        sub: []
+    }, {
         tag: "About AMUAAS",
         link: '',
         icon: 'GoInfo',
@@ -18,12 +24,6 @@ export default [
             link: '',
             icon: 'MdContactPhone'
         }]
-    }, {
-        tag: "Events ",
-        href: "/events",
-        link: '',
-        icon: 'MdEvent',
-        sub: []
     }, {
         tag: "Meet Our Teams",
         link: '',
