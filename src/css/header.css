@@ -10,6 +10,10 @@
 /* ==================================================
                         Header
 ===================================================== */
+/* to make position sticky work  */
+header{
+  display: unset;
+}
 
 header > section {
   display: flex;

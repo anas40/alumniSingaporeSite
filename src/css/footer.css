@@ -8,25 +8,18 @@
   font-family: "Roboto";
 }
 footer{
-  /* border-top: 2px solid #006600; */
-
-  /* background-image: url('../../static/logo.jpeg');
-  background-size:  auto 100%;
-  background-repeat: repeat;
-  background-position: center center; */
+  border-top: 2px solid #006600;
 }
 .footerContainer a:hover{
   text-decoration: none !important;
 }
 .footerContainer {
   background-color: rgba(255, 255, 255,.95);
-  border-top: 2px solid #006600;
   padding: 1.5rem 0;
   width: 90%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
 }
 .footerContainer .left {
   flex-basis: 40%;
@@ -114,6 +107,17 @@ footer{
   font-weight: 500;
   margin-bottom: 1rem;
   font-size: 1.2rem;
+}
+
+.copyrightMsg{
+  padding: 0.5rem;
+  background-color: #006600;
+}
+.copyrightMsg p{
+  text-align:center;
+  margin-bottom: 0;
+  color: white;
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 768px) {
