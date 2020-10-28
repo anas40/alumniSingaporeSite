@@ -16,6 +16,7 @@ import { RiTeamFill } from 'react-icons/ri'
 
 //json
 import jsonContent from "../../static/store/routesJSON"
+import contactContent from "../../static/store/contact"
 
 //css
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
@@ -38,8 +39,8 @@ function Footer() {
                     <div><p className="heading">Contact Us</p></div>
                     <div className="contactInfo">
                         <div className="location "><MdLocationOn className="icon" />AMU Alumni Association Singapore</div>
-                        <div><a href="mailto:demo@demo.com"><MdEmail className="icon" />demo@demo.com</a></div>
-                        <div><a href="tel:+123123123"><FaPhone className="icon" />+1212123434</a></div>
+                        <div><a href={`mailto:${contactContent.email}`}><MdEmail className="icon" />{contactContent.email}</a></div>
+                        <div><a href={`tel:${contactContent.number}`}><FaPhone className="icon" />{contactContent.number}</a></div>
                     </div>
                 </section>
                 <section className="social">
@@ -47,10 +48,10 @@ function Footer() {
                     <div>
                         <div><p className="red">AMU Alumni Association of Singapore.</p></div>
                         <div className="mediaLinks">
-                            <div><a href="#"><FaFacebook /></a></div>
-                            <div><a href="#"><FaTwitter /></a></div>
-                            <div><a href="#"><FaInstagram /></a></div>
-                            <div><a href="#"><FaYoutube /></a></div>
+                            <div><a href={contactContent.facebook}><FaFacebook /></a></div>
+                            <div><a href={contactContent.twitter}><FaTwitter /></a></div>
+                            <div><a href={contactContent.instagram}><FaInstagram /></a></div>
+                            <div><a href={contactContent.youtube}><FaYoutube /></a></div>
                         </div>
                     </div>
                 </section>

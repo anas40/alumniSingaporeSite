@@ -19,6 +19,7 @@ import Menu from './Menu'
 
 //json
 import jsonContent from "../../static/store/routesJSON"
+import contactContent from "../../static/store/contact"
 
 function Header() {
     return <header>
@@ -39,15 +40,15 @@ function Header() {
             </div>
             <div className="right">
                 <div className="contact">
-                    <div><a href="mailto:demo@demo.com"><MdEmail />demo@demo.com</a></div>
-                    <div><a href="tel:+123123123"><FaPhone />+1212123434</a></div>
+                    <div><a href={`mailto:${contactContent.email}`}><MdEmail />{contactContent.email}</a></div>
+                    <div><a href={`tel:${contactContent.number}`}><FaPhone />{contactContent.number}</a></div>
                 </div>
                 <div className="reach">
                     <div className="links">
-                        <div><a href="#"><FaFacebook /></a></div>
-                        <div><a href="#"><FaTwitter /></a></div>
-                        <div><a href="#"><FaInstagram /></a></div>
-                        <div><a href="#"><FaYoutube /></a></div>
+                        <div><a href={contactContent.facebook}><FaFacebook /></a></div>
+                        <div><a href={contactContent.twitter}><FaTwitter /></a></div>
+                        <div><a href={contactContent.instagram}><FaInstagram /></a></div>
+                        <div><a href={contactContent.youtube}><FaYoutube /></a></div>
                     </div>
                     <Button className="donateButton" variant="contained" color="secondary">
                         Donate<BiDonateHeart />
