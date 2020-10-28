@@ -14,9 +14,12 @@ import { RiTeamFill } from 'react-icons/ri'
 // import logo from '../../static/logo.jpeg'
 
 
+//json
+import jsonContent from "../../static/store/routesJSON"
+
 //css
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../css/footer.css'
+import '../css/footer.scss';
 
 //mapping icons for dynamic import
 const mapIcon = {
@@ -24,70 +27,9 @@ const mapIcon = {
 }
 
 
-
-
 function Footer() {
 
-    const content = [
-        {
-            tag: "Home",
-            link: '',
-            icon: 'FaHome',
-            sub: [{
-                tag: "Intro",
-                link: '',
-                icon: 'FaMicrophone'
-            }, {
-                tag: "Picture",
-                link: '',
-                icon: 'MdPhoto'
-            }]
-        }, {
-            tag: "About AMUAAS",
-            link: '',
-            icon: 'GoInfo',
-            sub: [{
-                tag: "Words from President",
-                link: '',
-                icon: 'GoPerson'
-            }, {
-                tag: " Intro",
-                icon: 'FaMicrophone',
-                link: ''
-            }, {
-                tag: "Contact Us",
-                link: '',
-                icon: 'MdContactPhone'
-            }]
-        }, {
-            tag: "Events ",
-            link: '',
-            icon: 'MdEvent',
-            sub: [{
-                tag: "Pictures and text from Past Events",
-                link: '',
-                icon: 'FaImages'
-            }, {
-                tag: "Gallery. (ssd, food donations)",
-                link: '',
-                icon: 'FaImages'
-            }]
-        }, {
-            tag: "Meet Our Teams",
-            link: '',
-            icon: 'FaHandshake',
-            sub: [{
-                tag: "Executive Committee",
-                link: '',
-                icon: 'RiTeamFill'
-            }, {
-                tag: "Working Committee",
-                link: '',
-                icon: 'BsFillPeopleFill'
-            }]
-        }
-
-    ]
+    const content = jsonContent
 
     return <footer>
         <div className="footerContainer">
@@ -118,7 +60,7 @@ function Footer() {
                 <div className="footerLinks">
                     {content.map(item => <div className="footerlinkcontainer">
                         <div className="footerLinkHeading">
-                            <p className="red">{item.tag}</p>
+                            <p className="red">{item.sub.length === 0 ? <a href={item.href}>{item.tag}</a> :item.tag}</p>
                         </div>
                         {item.sub.map(sub => <div><a href={sub.link}><p className="green">{React.createElement(mapIcon[sub.icon], { fontSize: "medium", className: 'icon' })}{sub.tag}</p></a></div>)}
                     </div>

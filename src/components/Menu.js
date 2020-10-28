@@ -63,36 +63,51 @@ export default function CustomizedMenus(props) {
 
     return (
         <div>
-            <Button
-                aria-controls="customized-menu"
-                aria-haspopup="true"
-                variant="contained"
-                className="navButton"
-                style={{ background: 'transparent', boxShadow: 'none', color: 'white' }}
-                onClick={handleClick}
-            >
-                {React.createElement(mapIcon[props.item.icon], { fontSize: "large",className:'mr-1' })}{props.item.tag} {anchorEl ? <FaAngleUp className="ml-1" /> : <FaAngleDown className="ml-1" />}
-            </Button>
-            <StyledMenu
-                id="customized-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                {props.item.sub.map(sub =>
-                    <StyledMenuItem className="listItem">
-                        <Link href={sub.link} className="navLinks">
-                            <ListItemIcon>
-                                {React.createElement(mapIcon[sub.icon], { fontSize:"large"})}
-                            </ListItemIcon>
-                            <ListItemText>
-                                {sub.tag}
-                            </ListItemText>
-                        </Link>
-                    </StyledMenuItem>
-                )}
-            </StyledMenu>
+            {props.item.sub.length !== 0 ? <>
+                <Button
+                    aria-controls="customized-menu"
+                    aria-haspopup="true"
+                    variant="contained"
+                    className="navButton"
+                    style={{ background: 'transparent', boxShadow: 'none', color: 'white' }}
+                    onClick={handleClick}
+                >
+                    {React.createElement(mapIcon[props.item.icon], { fontSize: "large", className: 'mr-1' })}{props.item.tag} {anchorEl ? <FaAngleUp className="ml-1" /> : <FaAngleDown className="ml-1" />}
+                </Button>
+
+                <StyledMenu
+                    id="customized-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    {props.item.sub.map(sub =>
+                        <StyledMenuItem className="listItem">
+                            <Link href={sub.link} className="navLinks">
+                                <ListItemIcon>
+                                    {React.createElement(mapIcon[sub.icon], { fontSize: "large" })}
+                                </ListItemIcon>
+                                <ListItemText>
+                                    {sub.tag}
+                                </ListItemText>
+                            </Link>
+                        </StyledMenuItem>
+                    )}
+                </StyledMenu>
+            </>
+                :
+                <Button
+                    aria-controls="customized-menu"
+                    aria-haspopup="true"
+                    variant="contained"
+                    href={props.item.href}
+                    className="navButton"
+                    style={{ background: 'transparent', boxShadow: 'none', color: 'white' }}
+                >
+                    {React.createElement(mapIcon[props.item.icon], { fontSize: "large", className: 'mr-1' })}{props.item.tag} 
+                </Button>
+            }
         </div>
     );
 }

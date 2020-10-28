@@ -17,6 +17,8 @@ import '../css/header.css'
 import { Navbar, Nav } from 'react-bootstrap'
 import Menu from './Menu'
 
+//json
+import jsonContent from "../../static/store/routesJSON"
 
 function Header() {
     return <header>
@@ -58,66 +60,7 @@ function Header() {
 }
 
 function NavCompo() {
-    const content = [
-        {
-            tag: "Home",
-            link: '',
-            icon: 'FaHome',
-            sub: [{
-                tag: "Intro",
-                link: '',
-                icon: 'FaMicrophone'
-            }, {
-                tag: "Picture",
-                link: '',
-                icon: 'MdPhoto'
-            }]
-        }, {
-            tag: "About AMUAAS",
-            link: '',
-            icon: 'GoInfo',
-            sub: [{
-                tag: "Words from President",
-                link: '',
-                icon: 'GoPerson'
-            }, {
-                tag: " Intro",
-                    icon: 'FaMicrophone',
-                link: ''
-            }, {
-                tag: "Contact Us",
-                link: '',
-                icon: 'MdContactPhone'
-            }]
-        }, {
-            tag: "Events ",
-            link: '',
-            icon: 'MdEvent',
-            sub: [{
-                tag: "Pictures and text from Past Events",
-                link: '',
-                icon: 'FaImages'
-            }, {
-                tag: "Gallery. (ssd, food donations)",
-                link: '',
-                icon: 'FaImages'
-            }]
-        }, {
-            tag: "Meet Our Teams",
-            link: '',
-            icon:'FaHandshake',
-            sub: [{
-                tag: "Executive Committee",
-                link: '',
-                icon: 'RiTeamFill'
-            }, {
-                tag: "Working Committee",
-                link: '',
-                icon: 'BsFillPeopleFill'
-            }]
-        }
-
-    ]
+    const content = jsonContent
     return <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

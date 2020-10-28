@@ -1,20 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
+$backgroundColor: #800000;
+$green: #006600;
+$fontColor:#fff;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
 }
-footer{
-  border-top: 2px solid #006600;
+footer {
+  background-color: $backgroundColor;
 }
-.footerContainer a:hover{
+.footerContainer a:hover {
   text-decoration: none !important;
 }
 .footerContainer {
-  background-color: rgba(255, 255, 255,.95);
   padding: 1.5rem 0;
   width: 90%;
   margin: auto;
@@ -32,11 +35,14 @@ footer{
 .footerContainer .social {
   padding: 1rem;
 }
-.footerContainer .red {
-  color: #800000;
+.footerContainer .red{
+  color: $fontColor;
+  a{
+  color: $fontColor;
+  }
 }
 .footerContainer .green {
-  color: #006600;
+  color: $fontColor;
 }
 
 .footerContainer .flinks {
@@ -49,7 +55,7 @@ footer{
   font-size: 1.6rem;
   width: fit-content;
   font-weight: 500;
-  color: #006600;
+  color: $fontColor;
   position: relative;
 }
 .footerContainer .heading::after {
@@ -57,7 +63,7 @@ footer{
   position: absolute;
   bottom: 0;
   left: 50%;
-  background-color: #006600;
+  background-color: $fontColor;
   height: 2px;
   width: 0;
   transition: all 0.3s ease;
@@ -73,14 +79,14 @@ footer{
 }
 .footerContainer .contactInfo div,
 .footerContainer .contactInfo div a {
-  color: #800000;
+  color:$fontColor;
 }
 .footerContainer .contactInfo > div {
   margin-bottom: 1rem;
 }
 .footerContainer .icon {
   margin-right: 1rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: $fontColor;
 }
 
 .footerContainer .mediaLinks {
@@ -90,7 +96,7 @@ footer{
   justify-content: space-evenly;
 }
 .footerContainer .mediaLinks div a {
-  color: rgba(0, 0, 0, 0.54);
+  color: $fontColor;
 }
 .footerContainer .footerLinks {
   display: flex;
@@ -109,14 +115,16 @@ footer{
   font-size: 1.2rem;
 }
 
-.copyrightMsg{
+.copyrightMsg {
   padding: 0.5rem;
   background-color: #006600;
 }
-.copyrightMsg p{
-  text-align:center;
+.copyrightMsg p {
+  text-align: center;
   margin-bottom: 0;
-  color: white;
+  color: $fontColor;
+  font-weight: 600;
+  letter-spacing: 1px;
   font-size: 0.75rem;
 }
 

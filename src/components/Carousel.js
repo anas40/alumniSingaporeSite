@@ -37,7 +37,7 @@ function Banner(props) {
                     {props.item.Caption}
                 </Typography>
 
-                <Button variant="outlined" className="ViewButton">
+                <Button variant="outlined" href="/events" className="ViewButton">
                     View Now
                 </Button>
             </CardContent>
