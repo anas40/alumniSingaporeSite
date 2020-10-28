@@ -2,8 +2,9 @@ import React from "react"
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Typography } from '@material-ui/core';
 import Carousel from '../components/reactCarousel'
+import TitleHeading from '../components/TitleHeading'
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import '../css/events.scss'
 
@@ -12,10 +13,7 @@ export default function Events() {
     return <div>
         <Header />
         <main>
-            <section>
-                <div className="pageTitle"><h1>Events At AMUAAS Singapore</h1></div>
-                <div className="text"><Typography>These are the past events, such events happen regularly here.</Typography></div>
-            </section>
+            <TitleHeading />
             <EventCarousel />
         </main>
         <Footer />
@@ -33,7 +31,7 @@ function EventCarousel() {
         transitionTime: 500,
         showStatus: false,
         autoPlay: true,
-        showArrows: false
+        showArrows: true
     }
 
     return events.map(event =>

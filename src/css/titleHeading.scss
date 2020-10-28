@@ -1,0 +1,20 @@
+$fontColor: #fff;
+
+.pageTitle {
+  background-color: #800000;
+  div {
+    padding: 1rem 0;
+    h1 {
+      font-size: 1.7rem;
+      text-align: center;
+      color: $fontColor;
+    }
+  }
+  .text {
+    padding: 1rem;
+    p {
+      color: $fontColor;
+      text-align: center;
+    }
+  }
+}
