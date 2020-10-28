@@ -125,7 +125,9 @@ function Footer() {
                     )}
                 </div>
             </section>
-
+        </div>
+        <div className="copyrightMsg">
+            <p>Copy right @ amuAlumni Singapore</p>
         </div>
     </footer>
 }
