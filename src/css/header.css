@@ -85,10 +85,12 @@ header .right .contact > div a {
   display: flex;
   align-items: center;
   color: black;
+  word-break: break-all;
   text-decoration: none;
 }
 header .right .contact > div svg {
   margin-right: 0.5rem;
+  min-width: 16px;
 }
 header .right .reach {
   flex-basis: 30%;
