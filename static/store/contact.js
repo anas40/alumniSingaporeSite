@@ -1,6 +1,6 @@
 export default {
     email: "amualumnisingapore@gmail.com",
-    number: "+6596459665",
+    number: "+6566409491",
     facebook: '',
     instagram: '',
     twitter: '',
