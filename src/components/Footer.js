@@ -63,7 +63,7 @@ function Footer() {
                         <div className="footerLinkHeading">
                             <p className="red">{item.sub.length === 0 ? <a href={item.href}>{item.tag}</a> :item.tag}</p>
                         </div>
-                        {item.sub.map(sub => <div><a href={sub.link}><p className="green">{React.createElement(mapIcon[sub.icon], { fontSize: "medium", className: 'icon' })}{sub.tag}</p></a></div>)}
+                        {item.sub.map(sub => <div><a href={sub.href}><p className="green">{React.createElement(mapIcon[sub.icon], { fontSize: "medium", className: 'icon' })}{sub.tag}</p></a></div>)}
                     </div>
                     )}
                 </div>

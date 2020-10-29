@@ -84,7 +84,7 @@ export default function CustomizedMenus(props) {
                 >
                     {props.item.sub.map(sub =>
                         <StyledMenuItem className="listItem">
-                            <Link href={sub.link} className="navLinks">
+                            <Link href={sub.href} className="navLinks">
                                 <ListItemIcon>
                                     {React.createElement(mapIcon[sub.icon], { fontSize: "large" })}
                                 </ListItemIcon>
