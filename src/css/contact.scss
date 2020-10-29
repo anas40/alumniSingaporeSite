@@ -1,0 +1,35 @@
+.contactContainer{
+    margin: 4rem 0rem;
+    >section{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+        flex-wrap: wrap;
+        >div{
+            flex-basis: 33.33%;
+            width: 33.33%;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+            .icon{
+                font-size: 2.5rem;
+            }
+            >:last-child{
+                margin: 1rem 0;
+                a{
+                    color: black;
+                    word-break: break-all;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
