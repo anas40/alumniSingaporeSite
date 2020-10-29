@@ -18,7 +18,8 @@ export default [
         sub: [{
             tag: "Words from President",
             link: '',
-            icon: 'GoPerson'
+            icon: 'GoPerson',
+            href:'/wordsFromPresident'
         }, {
             tag: "Contact Us",
             link: '',
