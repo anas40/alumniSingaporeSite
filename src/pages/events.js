@@ -13,7 +13,7 @@ export default function Events() {
     return <div>
         <Header />
         <main>
-            <TitleHeading />
+            <TitleHeading heading="Events At AMUAAS" body="These events happen regularly at AMUAAS."/>
             <EventCarousel />
         </main>
         <Footer />
