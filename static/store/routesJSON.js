@@ -26,11 +26,11 @@ export default [
         icon: 'FaHandshake',
         sub: [{
             tag: "Executive Committee",
-            href: '/meetTeam',
+            href: '/executiveCommittee',
             icon: 'RiTeamFill'
         }, {
             tag: "Working Committee",
-            href: '/meetTeam',
+            href: '/workingCommittee',
             icon: 'BsFillPeopleFill'
         }]
     }

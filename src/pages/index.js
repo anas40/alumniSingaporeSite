@@ -32,8 +32,8 @@ export default function Home() {
             for all and particularly the underprivileged through education,
             by supporting AMU and its students in their academic efforts,
             and by organizing events to highlight AMU's role in creating a modern India.</p>
-            <p>AMU Alumni Association was granted a tax-exempt status,
-               501(c) (3) designation, by the United States IRS in 2004.</p>
+            <p>AMUAAS aims to keep alive Sir Syed Ahmad Khan's dream of ensuring equality
+            for all.</p>
 
           </article>
         </section>
