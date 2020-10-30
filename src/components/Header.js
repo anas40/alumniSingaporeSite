@@ -34,7 +34,8 @@ function Header() {
                         <p>Singapore</p>
                     </div>
                     <div className="nonProfit">
-                        <p>A Non-Profit 501 (c) (3) Educational & Charitable Organization Tax ID 94-3366186</p>
+                        <p>AMUAAS aims to keep alive Sir Syed Ahmad Khan's dream of ensuring equality
+            for all.</p>
                     </div>
                 </div>
             </div>

@@ -13,10 +13,19 @@ import {
 } from '@material-ui/core';
 
 //carousel images
-import c1 from '../../static/carousel/1.jpeg'
-import c2 from '../../static/carousel/2.jpeg'
-import c3 from '../../static/carousel/3.jpeg' 
-import c4 from '../../static/carousel/4.jpeg'
+import c6 from '../../static/carousel/1.jpeg'
+import c7 from '../../static/carousel/2.jpeg'
+import c8 from '../../static/carousel/3.jpeg' 
+import c9 from '../../static/carousel/4.jpeg'
+
+
+
+import c1 from '../../static/ssdayimages/1.jpg'
+import c2 from '../../static/ssdayimages/2.jpg'
+import c3 from '../../static/ssdayimages/3.jpg'
+import c4 from '../../static/ssdayimages/4.jpg'
+import c5 from '../../static/ssdayimages/5.jpg'
+
 
 
 function Banner(props) {
@@ -88,17 +97,17 @@ function Banner(props) {
 
 const items = [
     {
-        Name: "Electronics",
-        Caption: "Electrify your friends!",
+        Name: "Sir Syed Day Celebration",
+        Caption: "Sir Syed Day Celebration",
         contentPosition: "left",
         Items: [
             {
-                Name: "Macbook Pro",
-                Image: "https://source.unsplash.com/featured/?macbook"
+                Name: "Sir Syed Day Celebration",
+                Image: c3
             },
             {
-                Name: "iPhone",
-                Image: "https://source.unsplash.com/featured/?iphone"
+                Name: "Sir Syed Day Celebration",
+                Image: c4
             }
         ]
     },
@@ -109,25 +118,25 @@ const items = [
         Items: [
             {
                 Name: "Sir Syed Day Celebration",
-                Image: c3
+                Image: c8
             },
             {
                 Name: "Sir Syed Day Celebration",
-                Image: c1
+                Image: c6
             }
         ]
     },
     {
-        Name: "Decoratives",
-        Caption: "Give style and color to your living room!",
+        Name: "Sir Syed Day Celebration",
+        Caption: "Sir Syed Day Celebration",
         contentPosition: "right",
         Items: [
             {
-                Name: "Living Room Lamp",
-                Image: c4
+                Name: "Sir Syed Day Celebration",
+                Image: c1
             },
             {
-                Name: "Floral Vase",
+                Name: "Sir Syed Day Celebration",
                 Image: c2
             }
         ]
