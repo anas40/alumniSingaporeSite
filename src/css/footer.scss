@@ -3,7 +3,7 @@
 
 $backgroundColor: #800000;
 $green: #006600;
-$fontColor:#fff;
+$fontColor: #fff;
 
 * {
   margin: 0;
@@ -23,98 +23,98 @@ footer {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-}
-.footerContainer .left {
-  flex-basis: 40%;
-  width: 40%;
-}
-.footerContainer .contact {
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
-.footerContainer .social {
-  padding: 1rem;
-}
-.footerContainer .red{
-  color: $fontColor;
-  a{
-  color: $fontColor;
+  .left {
+    flex-basis: 40%;
+    width: 40%;
   }
-}
-.footerContainer .green {
-  color: $fontColor;
-}
 
-.footerContainer .flinks {
-  flex-basis: 60%;
-  width: 60%;
-  padding: 1rem;
-}
+  .contact {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  .social {
+    padding: 1rem;
+  }
+  .red {
+    color: $fontColor;
+    a {
+      color: $fontColor;
+    }
+  }
+  .green {
+    color: $fontColor;
+  }
 
-.footerContainer .heading {
-  font-size: 1.6rem;
-  width: fit-content;
-  font-weight: 500;
-  color: $fontColor;
-  position: relative;
-}
-.footerContainer .heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  background-color: $fontColor;
-  height: 2px;
-  width: 0;
-  transition: all 0.3s ease;
-}
-.footerContainer .flinks:hover .heading::after,
-.footerContainer .contact:hover .heading::after,
-.footerContainer .social:hover .heading::after {
-  width: 100%;
-  left: 0;
-}
-.footerContainer .contactInfo {
-  padding: 1rem 0;
-}
-.footerContainer .contactInfo div,
-.footerContainer .contactInfo div a {
-  color:$fontColor;
-}
-.footerContainer .contactInfo > div {
-  margin-bottom: 1rem;
-}
-.footerContainer .icon {
-  margin-right: 1rem;
-  color: $fontColor;
-}
+  .flinks {
+    flex-basis: 60%;
+    width: 60%;
+    padding: 1rem;
+  }
 
-.footerContainer .mediaLinks {
-  display: flex;
-  max-width: 300px;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.footerContainer .mediaLinks div a {
-  color: $fontColor;
-}
-.footerContainer .footerLinks {
-  display: flex;
-  flex-wrap: wrap;
-}
-.footerContainer .footerLinks > * {
-  flex-basis: 50%;
-  width: 50%;
+  .heading {
+    font-size: 1.6rem;
+    width: fit-content;
+    font-weight: 300;
+    color: $fontColor;
+    position: relative;
+  }
+  .heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: $fontColor;
+    height: 2px;
+    width: 0;
+    transition: all 0.3s ease;
+  }
+  .flinks:hover .heading::after,
+  .contact:hover .heading::after,
+  .social:hover .heading::after {
+    width: 100%;
+    left: 0;
+  }
+  .contactInfo {
+    padding: 1rem 0;
+  }
+  .contactInfo div,
+  .contactInfo div a {
+    color: $fontColor;
+  }
+  .contactInfo > div {
+    margin-bottom: 1rem;
+  }
+  .icon {
+    margin-right: 1rem;
+    color: $fontColor;
+  }
+
+  .mediaLinks {
+    display: flex;
+    max-width: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .mediaLinks div a {
+    color: $fontColor;
+  }
+  .footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footerLinks > * {
+    flex-basis: 50%;
+    width: 50%;
+  }
+  .footerLinkHeading {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
 }
 .footerlinkcontainer {
   padding: 1rem;
 }
-.footerContainer .footerLinkHeading {
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
 .copyrightMsg {
   padding: 0.5rem;
   background-color: #006600;
