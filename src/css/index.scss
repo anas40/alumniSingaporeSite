@@ -6,7 +6,7 @@
   background: #ccc;
 }
 
-.wordContainer {
+.wordContainerI {
   background-color: white;
   border-radius: 4px;
   padding: 4rem 3rem;
@@ -52,7 +52,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .wordContainer {
+  .wordContainerI {
     padding: 2rem 1rem;
     display: grid;
     grid-template-columns: 1fr;

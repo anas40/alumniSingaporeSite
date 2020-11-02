@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       <Carousel />
       <div className="breakLine"></div>
-      <section className="wordContainer">
+      <section className="wordContainerI">
         <section className="left">
           <article className="textPart">
             <div>
