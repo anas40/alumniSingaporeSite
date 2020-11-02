@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from "react-material-ui-carousel"
 import autoBind from "auto-bind"
 import '../css/carousel.scss';
+import window from 'global/window'
 
 import {
     Card,
@@ -100,6 +101,7 @@ function Banner(props) {
         items.splice(items.length / 2, 0, content);
     }
 
+
     return (
         <Card raised className="Banner">
             <Grid container spacing={0} className="BannerGrid">
@@ -108,9 +110,7 @@ function Banner(props) {
         </Card>
     )
 }
-if (!process.env.BROWSER) {
-    global.window = { screen: {width:600}}; // Temporarily define window for server-side
-}
+
 const deviceWidth = window.screen.width
 const items = deviceWidth < 600 ? [
     {

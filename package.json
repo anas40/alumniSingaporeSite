@@ -28,6 +28,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.24.79",
     "gatsby-plugin-sass": "^2.3.18",
+    "global": "^4.4.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
