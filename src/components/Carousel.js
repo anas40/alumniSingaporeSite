@@ -15,7 +15,7 @@ import {
 //carousel images
 import c6 from '../../static/carousel/1.jpeg'
 import c7 from '../../static/carousel/2.jpeg'
-import c8 from '../../static/carousel/3.jpeg' 
+import c8 from '../../static/carousel/3.jpeg'
 import c9 from '../../static/carousel/4.jpeg'
 
 
@@ -35,7 +35,21 @@ function Banner(props) {
     const mediaLength = totalItems - 1;
 
     let items = [];
-    const content = (
+    const content = props.item.Image ? (<Grid item xs={12 / totalItems} key={props.item.Name}>
+        <CardMedia
+            className="Media"
+            image={props.item.Image}
+            title={props.item.Name}
+        >
+
+            <Typography className="MediaCaption">
+                {props.item.Name}
+            </Typography>
+
+
+        </CardMedia>
+
+    </Grid>) : (
         <Grid item xs={12 / totalItems} key="content">
             <CardContent className="Content">
                 <Typography className="Title">
@@ -54,7 +68,7 @@ function Banner(props) {
     )
 
 
-    for (let i = 0; i < mediaLength; i++) {
+    for (let i = 0; i < mediaLength && props.item.Items; i++) {
         const item = props.item.Items[i];
 
         const media = (
@@ -94,65 +108,107 @@ function Banner(props) {
         </Card>
     )
 }
-
-const items = [
+const deviceWidth = window.screen.width
+const items = deviceWidth < 600 ? [
     {
         Name: "Sir Syed Day Celebration",
         Caption: "Sir Syed Day Celebration",
         contentPosition: "left",
-        Items: [
-            {
-                Name: "Sir Syed Day Celebration",
-                Image: c3
-            },
-            {
-                Name: "Sir Syed Day Celebration",
-                Image: c4
-            }
-        ]
     },
+    {
+        Name: "Sir Syed Day Celebration",
+        Image: c3
+    },
+    {
+        Name: "Sir Syed Day Celebration",
+        Image: c4
+    }
+    ,
     {
         Name: "Sir Syed Day 2020",
         Caption: "Sir Syed Day 2020 celebration at singapore",
         contentPosition: "middle",
-        Items: [
-            {
-                Name: "Sir Syed Day Celebration",
-                Image: c8
-            },
-            {
-                Name: "Sir Syed Day Celebration",
-                Image: c6
-            }
-        ]
     },
+    {
+        Name: "Sir Syed Day Celebration",
+        Image: c8
+    },
+    {
+        Name: "Sir Syed Day Celebration",
+        Image: c6
+    }
+    ,
     {
         Name: "Sir Syed Day Celebration",
         Caption: "Sir Syed Day Celebration",
         contentPosition: "right",
-        Items: [
-            {
-                Name: "Sir Syed Day Celebration",
-                Image: c1
-            },
-            {
-                Name: "Sir Syed Day Celebration",
-                Image: c2
-            }
-        ]
+    },
+    {
+        Name: "Sir Syed Day Celebration",
+        Image: c1
+    },
+    {
+        Name: "Sir Syed Day Celebration",
+        Image: c2
     }
-]
+] : [
+        {
+            Name: "Sir Syed Day Celebration",
+            Caption: "Sir Syed Day Celebration",
+            contentPosition: "left",
+            Items: [
+                {
+                    Name: "Sir Syed Day Celebration",
+                    Image: c3
+                },
+                {
+                    Name: "Sir Syed Day Celebration",
+                    Image: c4
+                }
+            ]
+        },
+        {
+            Name: "Sir Syed Day 2020",
+            Caption: "Sir Syed Day 2020 celebration at singapore",
+            contentPosition: "middle",
+            Items: [
+                {
+                    Name: "Sir Syed Day Celebration",
+                    Image: c8
+                },
+                {
+                    Name: "Sir Syed Day Celebration",
+                    Image: c6
+                }
+            ]
+        },
+        {
+            Name: "Sir Syed Day Celebration",
+            Caption: "Sir Syed Day Celebration",
+            contentPosition: "right",
+            Items: [
+                {
+                    Name: "Sir Syed Day Celebration",
+                    Image: c1
+                },
+                {
+                    Name: "Sir Syed Day Celebration",
+                    Image: c2
+                }
+            ]
+        }
+    ]
 
 class BannerExample extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            autoPlay: false,
-            interval: 300000,
+            autoPlay: true,
+            interval: 3000,
             animation: "fade",
             indicators: true,
-            timeout: 300,
+            timeout: 500,
             navButtonsAlwaysVisible: false,
             navButtonsAlwaysInvisible: false
         }
@@ -175,7 +231,7 @@ class BannerExample extends React.Component {
         >
             {
                 items.map((item, index) => {
-                    return <Banner item={item} key={index} contentPosition={item.contentPosition} />
+                    return <Banner item={item} length={deviceWidth<600?1:3} key={index} contentPosition={item.contentPosition} />
                 })
             }
         </Carousel>

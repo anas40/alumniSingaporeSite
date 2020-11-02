@@ -153,3 +153,13 @@ $huge-font-size: 40px;
         }
     }
 }
+
+@media (max-width:550px){
+    .Banner{
+        .Content{
+            .Title{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
