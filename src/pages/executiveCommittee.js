@@ -26,9 +26,9 @@ export default function Events() {
                         </div>
                         <div className="textPart">
                             <div>
-                                <h2>President</h2>
+                                <h2>APJ Abdul Kalam</h2>
                             </div>
-                            <p>APJ Abdul Kalam</p>
+                            <p>President</p>
                         </div>
                     </div>
                 </section>
@@ -39,9 +39,9 @@ export default function Events() {
                         </div>
                         <div className="textPart">
                             <div>
-                                <h2>{person.position}</h2>
+                                <h2>{person.name}</h2>
                             </div>
-                            <p>{person.name}</p>
+                            <p>{person.position}</p>
                         </div>
                     </div>
                     )
