@@ -80,6 +80,7 @@ footer {
   .contactInfo div,
   .contactInfo div a {
     color: $fontColor;
+    word-break: break-all;
   }
   .contactInfo > div {
     margin-bottom: 1rem;
@@ -123,9 +124,8 @@ footer {
   text-align: center;
   margin-bottom: 0;
   color: $fontColor;
-  font-weight: 600;
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 10px;
 }
 
 @media screen and (max-width: 768px) {
