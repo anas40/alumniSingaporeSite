@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import TitleHeading from '../components/TitleHeading'
 
 import '../css/meetTeam.scss'
-import PI from '../../static/model.jpg'
+import PI from '../../static/model.png'
 
 export default function Events() {
 
@@ -34,11 +34,7 @@ export default function Events() {
                     )
                     }
                 </section>
-                <div className="belt">
-                    <img id="filterImage1" className="filterImage" src={PI} alt="President of AMUAAS" />
-                    <img id="filterImage2" className="filterImage" src={PI} alt="President of AMUAAS" />
-                    <img id="filterImage3" className="filterImage" src={PI} alt="President of AMUAAS" />
-                </div>
+              
             </section>
         </main>
         <Footer />

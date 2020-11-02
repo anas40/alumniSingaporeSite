@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import TitleHeading from '../components/TitleHeading'
 
 import '../css/meetTeam.scss'
-import PI from '../../static/president.webp'
+import PI from '../../static/model.png'
 
 export default function Events() {
 

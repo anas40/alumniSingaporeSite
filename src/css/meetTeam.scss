@@ -2,25 +2,9 @@ $red: #800000;
 
 .teamContainer {
   position: relative;
+  overflow: hidden;
   background-color: white;
-  .belt {
-    .filterImage {
-      top: 0;
-      position: absolute;
-      height: 100%;
-      width: 33.33%;
-      filter: saturate(0) opacity(0.5);
-    }
-    #filterImage1 {
-      left: 0;
-    }
-    #filterImage2 {
-      left: 33.33%;
-    }
-    #filterImage3 {
-      left: 66.66%;
-    }
-  }
+
   padding: 4rem 0;
   .onlyOne {
     display: flex;
@@ -35,36 +19,53 @@ $red: #800000;
     margin: 2rem 0;
     .card {
       max-width: 300px;
+     
     }
   }
   .card {
+    position: relative;
     flex-basis: 33.33%;
-    box-shadow: 0 0 12px -4px rgba($color: #000000, $alpha: 0.8);
-    margin: 2rem 1rem;
+    // box-shadow: 0 0 12px -4px rgba($color: #000000, $alpha: 0.8);
+    margin: 2rem 0rem;
     padding: 1rem;
-    background-color: white;
     border-radius: 10%;
-    border: 1px solid #aaa;
-    width: 50%;
-    min-width: 300px;
+    border: 0px solid #aaa;
+    // width: 50%;
+
+    min-width: 250px;
     max-width: 400px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 132px;
+      height: 100px;
+      z-index: 1;
+      width: 400%;
+      transform: translateX(-50%);
+      background-color: #ffdb58;
+    }
     .imagePart {
+      position: relative;
+      z-index: 2;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
       img {
         margin: 1rem;
-        width: 100%;
-        min-width: 150px;
-        max-width: 200px;
-        height: auto;
+        width: 200px;
+        // min-width: 150px;
+        // max-width: 200px;
+        height: 200px;
         min-height: 150px;
-        box-shadow: 0 0px 12px -8px black;
+        // box-shadow: 0 0 12px -8px black;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
       }
     }
     .textPart {
       margin: 1rem auto;
+      border-bottom: 2px solid #800000;
       p {
         text-align: center;
         font-style: italic;
