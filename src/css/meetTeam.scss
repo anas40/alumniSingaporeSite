@@ -1,18 +1,40 @@
 $red: #800000;
 
 .teamContainer {
-  margin: 4rem 0;
+  position: relative;
+  background-color: white;
+  .belt {
+    .filterImage {
+      top: 0;
+      position: absolute;
+      height: 100%;
+      width: 33.33%;
+      filter: saturate(0) opacity(0.5);
+    }
+    #filterImage1 {
+      left: 0;
+    }
+    #filterImage2 {
+      left: 33.33%;
+    }
+    #filterImage3 {
+      left: 66.66%;
+    }
+  }
+  padding: 4rem 0;
   .onlyOne {
     display: flex;
     justify-content: center;
   }
   .multiple {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 2rem 0;
-    .card{
-        max-width: 300px;
+    .card {
+      max-width: 300px;
     }
   }
   .card {
@@ -32,23 +54,26 @@ $red: #800000;
       justify-content: center;
       align-items: center;
       img {
-        border-radius: 50%;
-        width: 50%;
+        margin: 1rem;
+        width: 100%;
         min-width: 150px;
+        max-width: 200px;
         height: auto;
         min-height: 150px;
         box-shadow: 0 0px 12px -8px black;
       }
     }
     .textPart {
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      h2,
+      margin: 1rem auto;
       p {
         text-align: center;
+        font-style: italic;
+        font-size: 1.2rem;
       }
       h2 {
-        color: $red;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.4rem;
       }
     }
   }

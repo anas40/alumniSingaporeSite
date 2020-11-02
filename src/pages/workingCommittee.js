@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import TitleHeading from '../components/TitleHeading'
 
 import '../css/meetTeam.scss'
-import PI from '../../static/president.webp'
+import PI from '../../static/model.jpg'
 
 export default function Events() {
 
@@ -17,7 +17,7 @@ export default function Events() {
     return <div>
         <Header />
         <main>
-            <TitleHeading heading="Executive Team" body="Team which executes all functions." />
+            <TitleHeading heading="Working Team" body="Team which executes all functions." />
             <section className="teamContainer">
                 <section className="multiple">
                     {members.map(person => <div className="card">
@@ -26,14 +26,19 @@ export default function Events() {
                         </div>
                         <div className="textPart">
                             <div>
-                                <h2>{person.position}</h2>
+                                <h2>{person.name}</h2>
                             </div>
-                            <p>{person.name}</p>
+                            <p>{person.position}</p>
                         </div>
                     </div>
                     )
                     }
                 </section>
+                <div className="belt">
+                    <img id="filterImage1" className="filterImage" src={PI} alt="President of AMUAAS" />
+                    <img id="filterImage2" className="filterImage" src={PI} alt="President of AMUAAS" />
+                    <img id="filterImage3" className="filterImage" src={PI} alt="President of AMUAAS" />
+                </div>
             </section>
         </main>
         <Footer />
