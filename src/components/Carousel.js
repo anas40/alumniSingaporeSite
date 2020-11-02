@@ -108,6 +108,9 @@ function Banner(props) {
         </Card>
     )
 }
+if (!process.env.BROWSER) {
+    global.window = { screen: {width:600}}; // Temporarily define window for server-side
+}
 const deviceWidth = window.screen.width
 const items = deviceWidth < 600 ? [
     {
