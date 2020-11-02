@@ -111,7 +111,10 @@ function Banner(props) {
     )
 }
 
-const deviceWidth = window.screen.width
+if (window.screen) {
+    var deviceWidth = window.screen.width
+}
+
 const items = deviceWidth < 600 ? [
     {
         Name: "Sir Syed Day Celebration",
