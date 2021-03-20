@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
@@ -11,109 +11,104 @@
                         Header
 ===================================================== */
 /* to make position sticky work  */
-header{
+header {
   display: unset;
-}
+  section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 1rem 12px;
+  }
+  .right {
+    flex-basis: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    .contact {
+      flex-basis: 70%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 10px;
+      /* min-width: 300px; */
+      /* justify-content: space-evenly; */
+    }
+    .contact div {
+      margin: 0 0.5rem;
+    }
+    .contact > div a {
+      display: flex;
+      align-items: center;
+      color: black;
+      /* word-break: break-all; */
+      text-decoration: none;
+    }
+    .contact > div svg {
+      margin-right: 0.5rem;
+      min-width: 16px;
+    }
+    .reach {
+      flex-basis: 30%;
+      width: 30%;
+      display: grid;
+      place-items: center;
+      .links {
+        display: flex;
+        justify-content: space-between;
+      }
 
-header > section {
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-  padding: 1rem 12px;
-}
-header .right {
-  flex-basis: 40%;
-  width: 40%;
-  display: flex;
-  justify-content: space-evenly;
-}
-header .left {
-  padding: 0 10px;
-  flex-basis: 60%;
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header #logo {
-  flex-basis: 90px;
-  width: 90px;
-  margin-right: 0.625rem;
-}
-header .Hcontainer {
-  flex-basis: calc(100% - 100px - 20px);
-  width: calc(100% - 100px - 20px);
-}
-header .Hcontainer .associationName p {
-  font-family: "Philosopher", sans-serif;
-  font-weight: 400;
-  color: #006600;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  margin-bottom: 0;
-}
-header .Hcontainer .location p {
-  font-weight: 700;
-  color: #800000;
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-header .Hcontainer .nonProfit p {
-  color: #222222;
-  font-size: 0.75rem;
-  margin-bottom: 0;
-}
-header #logo img {
-  width: 90px;
-  height: 90px;
-}
+      .donateButton,
+      .donateButton:hover {
+        color: white !important;
+      }
 
-header .right .contact {
-  flex-basis: 70%;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 10px;
-  /* min-width: 300px; */
-  /* justify-content: space-evenly; */
+      .links a > * {
+        color: #232323;
+      }
+    }
+  }
+  .left {
+    padding: 0 10px;
+    flex-basis: 60%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #logo {
+    flex-basis: 90px;
+    width: 90px;
+    margin-right: 0.625rem;
+  }
+  .Hcontainer {
+    flex-basis: calc(100% - 100px - 20px);
+    width: calc(100% - 100px - 20px);
+    .associationName p {
+      font-family: "Philosopher", sans-serif;
+      font-weight: 400;
+      color: #006600;
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      margin-bottom: 0;
+    }
+    .location p {
+      font-weight: 700;
+      color: #800000;
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .nonProfit p {
+      color: #222222;
+      font-size: 0.75rem;
+      margin-bottom: 0;
+    }
+  }
+  #logo img {
+    width: 90px;
+    height: 90px;
+  }
 }
-header .right .contact div {
-  margin: 0 0.5rem;
-}
-header .right .contact > div a {
-  display: flex;
-  align-items: center;
-  color: black;
-  /* word-break: break-all; */
-  text-decoration: none;
-}
-header .right .contact > div svg {
-  margin-right: 0.5rem;
-  min-width: 16px;
-}
-header .right .reach {
-  flex-basis: 30%;
-  width: 30%;
-  /* min-width: 120px; */
-  display: grid;
-  place-items: center;
-}
-header .right .reach .links {
-  /* width: 60%; */
-  /* min-width: 100px; */
-  display: flex;
-  justify-content: space-between;
-  
-}
-header .right .reach .donateButton,header .right .reach .donateButton:hover{
-  color: white !important;
-}
-
-header .right .reach .links a > * {
-  color: #232323;
-}
-
 @media screen and (max-width: 910px) {
   header > section {
     padding: 10px;
@@ -136,7 +131,7 @@ header .right .reach .links a > * {
     height: 100px;
   }
 }
-@media (max-width: 450px){
+@media (max-width: 450px) {
   header .left {
     padding-top: 2rem;
     position: relative;
@@ -148,16 +143,16 @@ header .right .reach .links a > * {
     width: 100%;
   }
   header #logo img {
-  width: 50px;
-  height: 50px;
-}
-header .Hcontainer .associationName p{
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
+    width: 50px;
+    height: 50px;
+  }
+  header .Hcontainer .associationName p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
 }
 
 /* ==================================================
