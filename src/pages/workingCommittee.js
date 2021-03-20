@@ -5,19 +5,34 @@ import Footer from '../components/Footer'
 import TitleHeading from '../components/TitleHeading'
 
 import '../css/meetTeam.scss'
-import PI from '../../static/model.png'
+import daud from '../../static/comm/daudwbg.png'
+import ali from '../../static/comm/aliwbg.png'
+import mariam from '../../static/comm/mariamwbg.png'
+import saifullah from '../../static/comm/saifullahwbg.png'
+import zia from '../../static/comm/ziawbg.png'
+import haris from '../../static/comm/hariswbg.png'
+// import PI from '../../static/comm/wbg.png'
+import avatar from '../../static/avatarwbg.png'
+
+
 
 export default function Events() {
 
     const members = [
-        { name: "Name", position: "Position", image: PI },
-        { name: "Name", position: "Position", image: PI },
-        { name: "Name", position: "Position", image: PI }
+        { name: "Zia Haider", position: "", image: zia },
+        { name: "Haris Farooqi", position: "", image: haris },
+        { name: "Daud Zaidi", position: "", image: daud },
+        { name: "Mariam shaheen", position: "", image: mariam },
+        { name: "Ali Yousuf Zaidi", position: "", image: ali },
+        { name: "M.Mamoon Rasheed", position: "", image: avatar },
+        { name: "Najeeb", position: "", image: avatar },
+        { name: "Saifullah Saifi", position: "", image: saifullah },
+
     ]
     return <div>
         <Header />
         <main>
-            <TitleHeading heading="Working Team" body="Team which executes all functions." />
+            <TitleHeading heading="Working Team" body="" />
             <section className="teamContainer">
                 <section className="multiple">
                     {members.map(person => <div className="card">

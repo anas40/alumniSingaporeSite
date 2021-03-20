@@ -9,6 +9,8 @@ import { MdPhoto, MdContactPhone, MdWork, MdEvent } from 'react-icons/md'
 import { GoPerson, GoInfo } from 'react-icons/go'
 import { BsFillPeopleFill } from 'react-icons/bs'
 import { RiTeamFill } from 'react-icons/ri'
+import { AiFillBook } from 'react-icons/ai'
+import { BiDonateHeart } from 'react-icons/bi'
 
 //logo
 // import logo from '../../static/logo.jpeg'
@@ -24,7 +26,7 @@ import '../css/footer.scss';
 
 //mapping icons for dynamic import
 const mapIcon = {
-    FaImages, FaHandshake, FaMicrophone, FaHome, MdContactPhone, MdWork, MdEvent, MdPhoto, GoPerson, GoInfo, BsFillPeopleFill, RiTeamFill
+    BiDonateHeart,AiFillBook, FaImages, FaHandshake, FaMicrophone, FaHome, MdContactPhone, MdWork, MdEvent, MdPhoto, GoPerson, GoInfo, BsFillPeopleFill, RiTeamFill
 }
 
 
@@ -48,10 +50,10 @@ function Footer() {
                     <div>
                         <div><p className="red">AMU Alumni Association of Singapore.</p></div>
                         <div className="mediaLinks">
-                            <div><a href={contactContent.facebook}><FaFacebook /></a></div>
-                            <div><a href={contactContent.twitter}><FaTwitter /></a></div>
+                            <div><a href={contactContent.facebook} target="_blank"><FaFacebook /></a></div>
+                            {/* <div><a href={contactContent.twitter}><FaTwitter /></a></div>
                             <div><a href={contactContent.instagram}><FaInstagram /></a></div>
-                            <div><a href={contactContent.youtube}><FaYoutube /></a></div>
+                            <div><a href={contactContent.youtube}><FaYoutube /></a></div> */}
                         </div>
                     </div>
                 </section>
@@ -61,9 +63,9 @@ function Footer() {
                 <div className="footerLinks">
                     {content.map(item => <div className="footerlinkcontainer">
                         <div className="footerLinkHeading">
-                            <p className="red">{item.sub.length === 0 ? <a href={item.href}>{item.tag}</a> :item.tag}</p>
+                            <p className="red">{item.sub.length === 0 ? <a href={item.href} >{item.tag}</a> :item.tag}</p>
                         </div>
-                        {item.sub.map(sub => <div><a href={sub.href}><p className="green">{React.createElement(mapIcon[sub.icon], { fontSize: "medium", className: 'icon' })}{sub.tag}</p></a></div>)}
+                        {item.sub.map(sub => <div><a href={sub.href} target={sub.new ? "_blank" : ''}><p className="green">{React.createElement(mapIcon[sub.icon], { fontSize: "medium", className: 'icon' })}{sub.tag}</p></a></div>)}
                     </div>
                     )}
                 </div>

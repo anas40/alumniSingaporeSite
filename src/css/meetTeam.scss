@@ -17,8 +17,10 @@ $red: #800000;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 2rem 0;
+    
     .card {
       max-width: 300px;
+      
      
     }
   }
@@ -38,12 +40,12 @@ $red: #800000;
       content: "";
       position: absolute;
       left: 0;
-      top: 132px;
+      top: 152px;
       height: 100px;
       z-index: 1;
       width: 150vw;
       transform: translateX(-50%);
-      background-color: #ffdb58;
+      background-color: #800000;
     }
     .imagePart {
       position: relative;
@@ -55,9 +57,10 @@ $red: #800000;
       img {
         margin: 1rem;
         width: 200px;
+        // border-radius: 10%;
         // min-width: 150px;
         // max-width: 200px;
-        height: 200px;
+        height: 220px;
         min-height: 150px;
         // box-shadow: 0 0 12px -8px black;
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));

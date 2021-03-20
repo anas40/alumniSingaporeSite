@@ -2,8 +2,8 @@ import React from "react"
 
 //icons
 import { FaFacebook, FaTwitter, FaPhone, FaInstagram, FaYoutube } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
-import { BiDonateHeart } from 'react-icons/bi'
+import { MdEmail, MdAssignmentInd } from 'react-icons/md'
+// import { BiDonateHeart } from 'react-icons/bi'
 import Button from '@material-ui/core/Button';
 
 //logo
@@ -46,13 +46,13 @@ function Header() {
                 </div>
                 <div className="reach">
                     <div className="links">
-                        <div><a href={contactContent.facebook}><FaFacebook /></a></div>
-                        <div><a href={contactContent.twitter}><FaTwitter /></a></div>
+                        <div><a href={contactContent.facebook} target="_blank"><FaFacebook /></a></div>
+                        {/* <div><a href={contactContent.twitter}><FaTwitter /></a></div>
                         <div><a href={contactContent.instagram}><FaInstagram /></a></div>
-                        <div><a href={contactContent.youtube}><FaYoutube /></a></div>
+                        <div><a href={contactContent.youtube}><FaYoutube /></a></div> */}
                     </div>
-                    <Button className="donateButton" variant="contained" color="secondary">
-                        Donate<BiDonateHeart />
+                    <Button target="_blank" href="https://www.cognitoforms.com/AMUAlumniAssociationSingapore/AMUAlumniAssociationSingaporeRegistration" className="donateButton" variant="contained" color="secondary">
+                        Join Us
                     </Button>
                 </div>
             </div>

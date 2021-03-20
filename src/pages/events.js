@@ -10,24 +10,28 @@ import '../css/events.scss'
 
 
 
-import c6 from '../../static/carousel/1.jpeg'
-import c7 from '../../static/carousel/2.jpeg'
+import i2019a from '../../static/events/SSD2019/1.jpg'
+import i2019b from '../../static/events/SSD2019/2.jpg'
+import i2019c from '../../static/events/SSD2019/3.jpg'
+import i2019d from '../../static/events/SSD2019/4.jpg'
+import i2019e from '../../static/events/SSD2019/5.jpg'
 
-import c8 from '../../static/carousel/3.jpeg'
-import c9 from '../../static/carousel/4.jpeg'
 
+// import c1 from '../../static/events/SSD2018/2b.jpg'
+// import c2 from '../../static/events/SSD2018/2b.jpg'
+// import c3 from '../../static/events/SSD2018/2b.jpg'
+// import c4 from '../../static/events/SSD2018/2b.jpg'
+// import c5 from '../../static/events/SSD2018/2b.jpg'
 
-import c1 from '../../static/ssdayimages/1.jpg'
-import c2 from '../../static/ssdayimages/2.jpg'
-import c3 from '../../static/ssdayimages/3.jpg'
-import c4 from '../../static/ssdayimages/4.jpg'
-import c5 from '../../static/ssdayimages/5.jpg'
+//2018 images
+import i2018a from '../../static/events/SSD2018/2b.jpg'
+import i2018b from '../../static/events/SSD2018/1b.jpg'
 
 export default function Events() {
     return <div>
         <Header />
         <main>
-            <TitleHeading heading="Events At AMUAAS" body="These events happen regularly at AMUAAS."/>
+            <TitleHeading heading="Events At AMUAAS" body="AMUAAS"/>
             <EventCarousel />
         </main>
         <Footer />
@@ -35,13 +39,39 @@ export default function Events() {
 }
 
 function EventCarousel() {
-    const events = [{ name: "Food Donation Drive", pic: [{ picture: c1, about: "SSD" }, { picture: c6, about: "SSD" }, { picture: c3, about: "SSD" }] }, { name: "SS Day 2017", pic: [{ picture: c7, about: "SSD" }, { picture: c5, about: "SSD" }, { picture: c3, about: "SSD" }] }, { name: "SS Day 2016", pic: [{ picture: c4, about: "SSD" }, { picture: c8, about: "SSD" }, { picture: c9, about: "SSD" }] }]
+    const events = [
+        {
+            name: "Sir Syed Day 2020 - Zoom Event", desc: "SSDAY 2020 was celebrated Virtually because fo COVID19 situation. The event had fun parts including Virtual Games and skit.",
+            pic: [
+                { picture: i2019a, about: "SSD" },
+                { picture: i2019a, about: "SSD" },
+                { picture: i2019a, about: "SSD" }
+            ]
+        },
+        {
+            name: "Sir Syed Day 2019", desc: "SSDAY 2019 was celebrated in Singapore, with a gathering of 50+ people. Program had many events and games with lunch.",
+            pic: [
+                { picture: i2019a, about: "SSD 2019" },
+                { picture: i2019b, about: "SSD 2019" },
+                { picture: i2019c, about: "SSD 2019" },
+                { picture: i2019d, about: "SSD 2019" },
+                { picture: i2019e, about: "SSD 2019" }
+            ]
+        },
+        {
+            name: "Sir Syed Day 2018", desc: "SSDAY 2018 was celebrated at Labrador Park Singapore, with large gathering. Program highlights we baitbaazi, and AMU stories.",
+            pic: [
+                { picture: i2018a, about: "SSD 2018" },
+                { picture: i2018b, about: "SSD 2018" }
+            ]
+        }]
 
     const carouselSettings = {
         showThumbs: false,
         centerMode: true,
         infiniteLoop: true,
-        centerSlidePercentage: 60,
+        dynamicHeight:true,
+        centerSlidePercentage: 50,
         transitionTime: 500,
         showStatus: false,
         autoPlay: true,
@@ -50,7 +80,7 @@ function EventCarousel() {
 
     return events.map(event =>
         <section className="slider">
-            <div className="heading"><h2>{event.name}</h2><p>About:two lines aobut the evnet</p></div>
+            <div className="heading"><h2>{event.name}</h2><p>{event.desc}</p></div>
             <div className="carouselContainer">
                 <div>
                     <Carousel {...carouselSettings} pictures={event.pic} />

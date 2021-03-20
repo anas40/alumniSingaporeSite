@@ -21,11 +21,11 @@ import c9 from '../../static/carousel/4.jpeg'
 
 
 
-import c1 from '../../static/ssdayimages/1.jpg'
-import c2 from '../../static/ssdayimages/2.jpg'
-import c3 from '../../static/ssdayimages/3.jpg'
-import c4 from '../../static/ssdayimages/4.jpg'
-import c5 from '../../static/ssdayimages/5.jpg'
+import c1 from '../../static/events/SSD2018/2b.jpg'
+import c2 from '../../static/events/SSD2018/2b.jpg'
+import c3 from '../../static/events/SSD2018/2b.jpg'
+import c4 from '../../static/events/SSD2018/2b.jpg'
+import c5 from '../../static/events/SSD2018/2b.jpg'
 
 
 
@@ -117,7 +117,7 @@ if (window.screen) {
 
 const items = deviceWidth < 600 ? [
     {
-        Name: "Sir Syed Day Celebration",
+        Name: "Sir Syed Day Celebration 2019",
         Caption: "Sir Syed Day Celebration",
         contentPosition: "left",
     },
@@ -145,8 +145,8 @@ const items = deviceWidth < 600 ? [
     }
     ,
     {
-        Name: "Sir Syed Day Celebration",
-        Caption: "Sir Syed Day Celebration",
+        Name: "Sir Syed Day Celebration 2018",
+        Caption: "Sir Syed Day Celebration 2018",
         contentPosition: "right",
     },
     {

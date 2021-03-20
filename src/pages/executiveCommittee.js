@@ -5,33 +5,38 @@ import Footer from '../components/Footer'
 import TitleHeading from '../components/TitleHeading'
 
 import '../css/meetTeam.scss'
-import PI from '../../static/model.png'
+import hina from '../../static/comm/hinawbg.png'
+import farah from '../../static/comm/farahwbg.png'
+import rabiul from '../../static/comm/rabiulwbg.png'
+
 
 export default function Events() {
 
     const members = [
-        { name: "Name", position: "Position",image:PI },
-        { name: "Name", position: "Position",image:PI },
-        { name: "Name", position: "Position",image:PI }
+        { name: "Farah Zia", position: "President", image: farah },
+        { name: "Hina Harris", position: "Secretary",image:hina },
+        { name: "Rabiul Hossain", position: "Treasurer",image:rabiul },
+        // { name: "Name", position: "Position", image: d }
+
     ]
     return <div>
         <Header />
         <main>
-            <TitleHeading heading="Executive Team" body="Team which executes all functions." />
+            <TitleHeading heading="Executive Team" body="" />
             <section className="teamContainer">
-                <section className="onlyOne">
+                {/* <section className="onlyOne">
                     <div className="card">
                         <div className="imagePart">
-                            <img src={PI} alt="President of AMUAAS" />
+                            <img src={e} alt="President of AMUAAS" />
                         </div>
                         <div className="textPart">
                             <div>
-                                <h2>APJ Abdul Kalam</h2>
+                                <h2>Harish Faruqi</h2>
                             </div>
                             <p>President</p>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <section className="multiple">
                     {members.map(person => <div className="card">
                         <div className="imagePart">

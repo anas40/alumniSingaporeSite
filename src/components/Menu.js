@@ -11,6 +11,8 @@ import { MdPhoto, MdContactPhone, MdWork, MdEvent } from 'react-icons/md'
 import { GoPerson, GoInfo } from 'react-icons/go'
 import { BsFillPeopleFill } from 'react-icons/bs'
 import { RiTeamFill } from 'react-icons/ri'
+import { AiFillBook } from 'react-icons/ai'
+import { BiDonateHeart } from 'react-icons/bi'
 
 
 const StyledMenu = withStyles({
@@ -46,7 +48,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 const mapIcon = {
-    FaImages, FaHandshake, FaMicrophone, FaHome, MdContactPhone, MdWork, MdEvent, MdPhoto, GoPerson, GoInfo, BsFillPeopleFill, RiTeamFill
+    AiFillBook,BiDonateHeart,FaImages, FaHandshake, FaMicrophone, FaHome, MdContactPhone, MdWork, MdEvent, MdPhoto, GoPerson, GoInfo, BsFillPeopleFill, RiTeamFill
 }
 
 
@@ -84,7 +86,7 @@ export default function CustomizedMenus(props) {
                 >
                     {props.item.sub.map(sub =>
                         <StyledMenuItem className="listItem">
-                            <Link href={sub.href} className="navLinks">
+                            <Link href={sub.href} target={sub.new?"_blank":'' } className="navLinks">
                                 <ListItemIcon>
                                     {React.createElement(mapIcon[sub.icon], { fontSize: "large" })}
                                 </ListItemIcon>

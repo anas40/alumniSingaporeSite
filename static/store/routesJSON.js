@@ -20,6 +20,15 @@ export default [
             tag: "Contact Us",
             href: '/contactUs',
             icon: 'MdContactPhone'
+        }, {
+            tag: "Constitution",
+            href: 'https://www.docdroid.net/5r58bIe/constitution-amuaas-approved-by-ros-24aug2020-final-version-pdf',
+            icon: 'AiFillBook',
+            new:'yes'
+        }, {
+            tag: "Donate",
+            href: '/donate',
+            icon: 'BiDonateHeart'
         }]
     }, {
         tag: "Meet Our Teams",
