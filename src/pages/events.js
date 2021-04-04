@@ -66,11 +66,21 @@ function EventCarousel() {
             ]
         }]
 
-    const carouselSettings = {
+    const carouselSettings = window.screen.width<768?{
         showThumbs: false,
         centerMode: true,
         infiniteLoop: true,
         dynamicHeight:true,
+        centerSlidePercentage: 100,
+        transitionTime: 500,
+        showStatus: false,
+        autoPlay: true,
+        showArrows: true
+    } : {
+        showThumbs: false,
+        centerMode: true,
+        infiniteLoop: true,
+        dynamicHeight: true,
         centerSlidePercentage: 50,
         transitionTime: 500,
         showStatus: false,
