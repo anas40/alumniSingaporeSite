@@ -37,7 +37,7 @@ export default function Events() {
                 <section className="multiple">
                     {members.map(person => <div className="card">
                         <div className="imagePart">
-                            <img src={person.image} alt="President of AMUAAS" />
+                            <img load="lazy" src={person.image} alt="President of AMUAAS" />
                         </div>
                         <div className="textPart">
                             <div>
